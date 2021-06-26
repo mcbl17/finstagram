@@ -5,7 +5,7 @@ class FinstagramPost < ActiveRecord::Base
     has_many :likes
 
 
-    validates_presence_of :user
+    validates :photo_url, :user, presence: true
 
 
     def humanized_time_ago
